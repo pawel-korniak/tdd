@@ -1,15 +1,13 @@
 package com.pawelkorniak;
 
-import java.util.Objects;
 
 public class Franc extends Monney{
 
-    public Franc(int ammount) {
-        super(ammount);
+    public Franc(int ammount,String currency) {
+        super(ammount,currency);
+
     }
 
-    public Franc times(int i) {
-        return new Franc(ammount * i);
-    }
+
 
 }
