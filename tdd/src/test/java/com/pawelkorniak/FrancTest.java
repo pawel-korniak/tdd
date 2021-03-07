@@ -10,13 +10,13 @@ Dollars + Chf
 
  */
 
-class DollarTest {
+class FrancTest {
 
     @Test
     void times() {
         //given
-        Dollar five = new Dollar(5);
-        Dollar product = five.times(2);
+        Franc five = new Franc(5);
+        Franc product = five.times(2);
         //when
         assertEquals(product,five.times(2));
         //than
@@ -25,32 +25,33 @@ class DollarTest {
 
     @Test
     public void anotherTimes(){
-    //given
-    Dollar five = new Dollar(5);
-    //when
-    Dollar product = five.times(3);
-    //then
-    assertEquals(product,five.times(3));
+        //given
+        Franc five = new Franc(5);
+        Franc product = five.times(3);
+        //when
+
+        //then
+        assertEquals(product,five.times(3));
     }
 
     @Test
     public void dollarsAndChf(){
         //given
-        Dollar five = new Dollar(5);
+        Franc five = new Franc(5);
         //when
 
         //then
-        assertEquals(new Dollar(15),five.times(3));
+        assertEquals(new Franc(15),five.times(3));
     }
 
     @Test
     public void isEqual(){
-    //given
+        //given
 
-    //when
+        //when
 
-    //then
-    assertEquals(new Dollar(5),new Dollar(5));
+        //then
+        assertEquals(new Franc(5),new Franc(5));
     }
 
     @Test
@@ -60,7 +61,9 @@ class DollarTest {
         //when
 
         //then
-        assertNotEquals(new Dollar(6),new Dollar(5));
+        assertNotEquals(new Franc(6),new Franc(5));
     }
+
+
 
 }
