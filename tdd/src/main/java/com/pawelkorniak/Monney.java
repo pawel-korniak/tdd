@@ -2,7 +2,7 @@ package com.pawelkorniak;
 
 import java.util.Objects;
 
-class Monney {
+class Monney implements Expression{
     protected int ammount;
     protected String currency;
 
@@ -35,6 +35,9 @@ class Monney {
         return new Monney(ammount * i,currency);
     }
 
+    Expression plus(Monney addend){
+        return new Sum(this,addend);
+    }
 
     String currency(){
         return currency;
