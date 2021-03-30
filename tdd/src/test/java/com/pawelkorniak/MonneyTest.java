@@ -69,6 +69,19 @@ public class MonneyTest {
     Monney result = bank.reduce(Monney.dollar(1),"USD");
     //than
     assertEquals(Monney.dollar(1),result);
+    assertEquals(1,new Bank().rate("USD","USD"));
+    }
+
+    @Test
+    public void testReduceMonneyDifferentCurrency(){
+    //given
+    Bank bank = new Bank();
+    bank.addRate("CHF","USD",2);
+    Monney result = bank.reduce(Monney.franc(2),"USD");
+    //when
+
+    //then
+    assertEquals(Monney.dollar(1),result);
     }
 
 }

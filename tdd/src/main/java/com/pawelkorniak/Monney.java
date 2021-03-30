@@ -42,4 +42,11 @@ class Monney implements Expression{
     String currency(){
         return currency;
     }
+
+    @Override
+    public Monney reduce(Bank bank,String to) {
+        int rate = bank.rate(currency,to);
+
+        return new Monney(ammount/rate,to);
+    }
 }
